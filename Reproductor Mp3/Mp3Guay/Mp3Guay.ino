@@ -1,11 +1,11 @@
 /*****************************************************************************
  *
  *  Reproductor MP3 basado en VS100X
- *      Autor: José Daniel Herrera Gomariz
+ *      Autor: JosÃ© Daniel Herrera Gomariz
  *      http://arduino-guay.blogspot.com.es
  *
  *   Reproduce ficheros mp3 que deben estar en la SD formateada como FAT32
- *   Utiliza un módulo basado en un chip VS100X y un LCD 20x4
+ *   Utiliza un mÃ³dulo basado en un chip VS100X y un LCD 20x4
  *
  *******************************************************************************/
 #include <SPI.h>
@@ -32,13 +32,13 @@
 // Minimo volumen dB
 #define MIN_VOL 60
 
-// Máximo nº de entradas en el catálogo
+// Mï¿½ximo nï¿½ de entradas en el catï¿½logo
 #define MAX_ENTRADAS  15
-// Nº de caracteres en cada entrada
+// Nï¿½ de caracteres en cada entrada
 #define MAX_LONG 20
 #define MAX_LONGMAS1 21
 
-// Definición de caracteres para el progreso de la canción
+// Definiciï¿½n de caracteres para el progreso de la canciï¿½n
 byte bar1[8] = { B10001, B10001, B10001,  B10001,  B10001,  B10001,  B10001,  B10001 };
 byte bar2[8] = { B11001, B11001, B11001,  B11001,  B11001,  B11001,  B11001,  B11001 };
 byte bar3[8] = { B11101, B11101, B11101,  B11101,  B11101,  B11101,  B11101,  B11101 };
@@ -46,13 +46,13 @@ byte bar4[8] = { B11111, B11111, B11111,  B11111,  B11111,  B11111,  B11111,  B1
 byte bar5[8] = { B11111, B11111, B11111,  B11111,  B11111,  B11111,  B11111,  B11111 };
 byte barV[8] = { B00001, B00001, B00001,  B00001,  B00001,  B00001,  B00001,  B00001 };
 
-// Inicialización del cristal líquido
+// Inicializaciï¿½n del cristal lï¿½quido
 LiquidCrystal lcd(LCD_RS,LCD_Enable,A0,A1,A2,A3);
 
 //Creamos el objeto MP3
 AGMp3Player MP3player;
 
-//Arcvhivo de catálogo
+//Arcvhivo de catï¿½logo
 File fTexto;
 char nombreFichero[31];
 
@@ -64,7 +64,7 @@ char strArtista[MAX_LONGMAS1];
 char strAlbum[MAX_LONGMAS1];
 char strTitulo[MAX_LONGMAS1];
 
-// Variables para conocer la entrada del catalogo actual y anterior, así como el máximo de entradas
+// Variables para conocer la entrada del catalogo actual y anterior, asï¿½ como el mï¿½ximo de entradas
 byte entrada = 0;
 byte entradaA = 0;
 byte maxEntradas =  0;
@@ -126,7 +126,7 @@ char* leerLinea(File myFile, char* linea) {
   while (myFile.available() && (letra == 13 || letra == 10))
     letra= myFile.read();
   while (myFile.available() && (letra != 13)) {
-     if (letra == 'ñ') {
+     if (letra == 'ï¿½') {
 		 letra = 'n' +125;
 	 }
      linea[idx] = letra;
