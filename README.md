@@ -1,5 +1,4 @@
-# Blog
-Blog Arduino Guay
+#Blog Arduino Guay
 ==========================
 
 Este repositorio contiene todos los proyectos del blog "Arduino Guay"
