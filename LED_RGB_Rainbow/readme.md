@@ -1,5 +1,5 @@
- RGB Rainbow
- =====================
+# RGB Rainbow
+====================
 
   Ejemplo de como hacer un led 'Rainbow' con un led RGB de ánodo común Se utilizan tres salidas con la instrucción 'analogWrite' que produce una salida PWM para controlar 
   el brillo de cada led.
